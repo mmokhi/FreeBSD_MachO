@@ -25,8 +25,8 @@
  *
  */
 
-#ifndef MACHO_MACROS_H_
-#define MACHO_MACROS_H_
+#ifndef _SYS_MACHO_MACROS_H_
+#define _SYS_MACHO_MACROS_H_
 
 /**************** MachO Fat Header ****************/
 
@@ -146,4 +146,4 @@
 #define	MACHO_SG_FVMLIB		0x2
 #define	MACHO_SG_NORELOC	0x4
 
-#endif /* MACHO_MACROS_H_ */
+#endif /* _SYS_MACHO_MACROS_H_ */

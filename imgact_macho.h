@@ -43,8 +43,8 @@
 #include <sys/sysent.h>
 #include <sys/syscall.h>
 
-#include "macho_machdep.h"
-#include "macho_macros.h"
+#include "macho_machdep.h" /* FIXME Should change it to <machine/macho_machdep.h> */
+#include "macho_macros.h" /* FIXME Should change it to <sys/macho_macros.h> */
 
 typedef uint32_t cpu_type_t;
 typedef uint32_t cpu_subtype_t;

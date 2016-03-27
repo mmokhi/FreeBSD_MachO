@@ -46,7 +46,7 @@
 
 #include <machine/md_var.h>
 
-#include "imgact_macho.h" /* FIXME Should change it to sys/imgact_macho.h */
+#include "imgact_macho.h" /* FIXME Should change it to <sys/imgact_macho.h> */
 
 struct sysentvec macho_freebsd_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,

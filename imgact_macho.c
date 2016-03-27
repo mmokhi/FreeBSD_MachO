@@ -59,7 +59,7 @@
 
 #include <machine/md_var.h>
 
-#include "imgact_macho.h" /* FIXME Should change it to sys/imgact_macho.h */
+#include "imgact_macho.h" /* FIXME Should change it to <sys/imgact_macho.h> */
 
 #define	trunc_page_ps(va, ps)	((va) & ~(ps - 1))
 #define	round_page_ps(va, ps)	(((va) + (ps - 1)) & ~(ps - 1))
