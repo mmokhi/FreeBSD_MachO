@@ -59,7 +59,7 @@
 
 #include <machine/md_var.h>
 
-#include "imgact_macho.h"
+#include "imgact_macho.h" /* FIXME Should change it to sys/imgact_macho.h */
 
 #define	trunc_page_ps(va, ps)	((va) & ~(ps - 1))
 #define	round_page_ps(va, ps)	(((va) + (ps - 1)) & ~(ps - 1))
@@ -151,7 +151,8 @@ macho_fat_extract_arch(struct vnode *vp, const struct macho_fat_header *hdr,
 			return -1;
 		}
 	}
-	return 0;
+
+	return (i >= be32toh(hdr->nfat_arch)) ? ENOEXEC : 0;
 }
 
 static int
