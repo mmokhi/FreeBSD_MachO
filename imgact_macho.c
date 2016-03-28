@@ -586,7 +586,7 @@ macho_load_dyn(struct proc *p, struct macho_load_command *dlcp, int type,
 			return ENOEXEC;
 	} while (*np++);
 
-	snprintf(path, MAXPATHLEN, "%s%s", "/", name);
+	snprintf(path, MAXPATHLEN, "%s%s", EMUL_ROOT, name);
 	printf("loading %s at %s\n", (type == MACHO_MH_DYLINKER) ? "linker"
 	        : "library", path);
 	/* load/parse/map new dyn(linker/lib) */

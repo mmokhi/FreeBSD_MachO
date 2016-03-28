@@ -51,6 +51,8 @@ typedef uint32_t cpu_subtype_t;
 typedef uint32_t integer_t;
 typedef integer_t cpu_threadtype_t;
 
+#define EMUL_ROOT "/" /* XXX uses '/' as emulation path, FIXME can change it to '/compat/darwin' sometime */
+
 #if defined(__i386__) || defined(__amd64__)
 #define macho_current_cpu ((cpu_type_t) MACHO_CPU_TYPE_I386)
 #else
