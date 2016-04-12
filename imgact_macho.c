@@ -762,7 +762,7 @@ macho_parse_machfile(struct image_params *imgp,
 static int
 exec_macho_imgact(struct image_params *imgp)
 {
-	union macho_header *header = (union macho_header *) imgp->image_header;
+	const union macho_header *header = (const union macho_header *) imgp->image_header;
 	struct macho_fat_arch arch;
 	struct macho_mach_header mach_part;
 	u_long entry_addr;
