@@ -71,10 +71,15 @@
 #define printf printf
 #endif
 
+union macho_header {
+	struct macho_mach_header mach_header;
+	struct macho_fat_header fat_header;
+	char __pad[512];
+};
 
 static int
 macho_fat_extract_arch(struct vnode *vp, const struct macho_fat_header *hdr,
-        struct macho_fat_arch *arch);
+		struct macho_fat_arch *arch);
 
 static int
 macho_mach_extract(struct image_params *imgp, const union macho_header *header,
