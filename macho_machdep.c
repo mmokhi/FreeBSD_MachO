@@ -52,8 +52,8 @@ struct sysentvec macho_freebsd_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
 	.sv_mask	= 0,
-	.sv_sigsize	= 0,
-	.sv_sigtbl	= NULL,
+	/*.sv_sigsize	= 0,*/
+	/*.sv_sigtbl	= NULL,*/
 	.sv_errsize	= 0,
 	.sv_errtbl	= NULL,
 	.sv_transtrap	= NULL,
@@ -61,7 +61,7 @@ struct sysentvec macho_freebsd_sysvec = {
 	.sv_sendsig	= sendsig,
 	.sv_sigcode	= sigcode,
 	.sv_szsigcode	= &szsigcode,
-	.sv_prepsyscall	= NULL,
+	/*.sv_prepsyscall	= NULL,*/
 	.sv_name	= "FreeBSD Mach-O",
 	.sv_coredump	= NULL, /* __elfN(coredump), */
 	.sv_imgact_try	= NULL,
@@ -85,6 +85,7 @@ struct sysentvec macho_freebsd_sysvec = {
 	.sv_schedtail	= NULL,
 };
 INIT_SYSENTVEC(macho_sysvec, &macho_freebsd_sysvec);
+
 
 u_long
 macho_thread_entry(struct macho_thread_command *tc)
